@@ -1,13 +1,15 @@
 # ScriptBKP-Android-PC-Pendrive
-
+<br>
 Este script foi desenvolvido para realizar o backup de fotos do celular para o PC e, em seguida, transferir o backup completo do PC para um pendrive.
 
 Ele orquestra a interação entre múltiplas plataformas: **um PC com Windows, um celular Android e um dispositivo de armazenamento externo (pendrive)**, facilitando o processo de backup e transferência de dados entre sistemas heterogêneos.
-
+<br>
+<br>
 ## Fluxo Geral
 1. O backup anterior das fotos no PC é removido.
 2. As fotos mais recentes do celular são copiadas para o PC.
 3. O backup completo do PC (incluindo as fotos copiadas) é transferido para o pendrive.
+
 
 ## Requisitos e Pré-Requisitos
 1. O script utiliza a ferramenta **ADB (Android Debug Bridge)** para interagir com dispositivos Android a partir do Python. Portanto, é necessário instalá-la no PC.
@@ -16,13 +18,14 @@ Ele orquestra a interação entre múltiplas plataformas: **um PC com Windows, u
 2. Antes de executar o script:
 
     * Certifique-se de que o celular está conectado ao PC via USB, com a **depuração USB ativada** (encontrada geralmente nas opções de desenvolvedor).
-
     * O pendrive deve estar plugado, formatado, e com uma nova pasta criada para receber o backup.
+<br>
+<br>
 
 ## Observações Adicionais
 1. **Caminhos de diretórios:**
 
-    * Para diretórios Windows, utilize barras invertidas (\), exemplo: C:\nome\pasta.
+    * Para diretórios Windows, utilize barras invertidas (\\), exemplo: C:\nome\pasta.
     * Para diretórios no Android, use barras normais (/), exemplo: /sdcard/nome/pasta.
 
 2. O script e o Windows são sensíveis à nomenclatura de pastas e diretórios. **Evite usar espaços e caracteres especiais** nos nomes dos diretórios para evitar erros.
@@ -38,9 +41,8 @@ Ele orquestra a interação entre múltiplas plataformas: **um PC com Windows, u
 * **NTFS**: Restrito ao Windows (Microsoft), recomendado para grandes volumes de dados, mas não compatível com muitos dispositivos fora do ambiente Windows.
 * **FAT32**: Sistema mais antigo, aceita arquivos de até 4GB. Compatível com a maioria dos dispositivos, mas limitado por esse tamanho de arquivo.
 * **exFAT**: Uma versão atualizada do FAT32, aceita arquivos maiores que 4GB e é amplamente suportado por dispositivos mais recentes.
-#
-
-
+<br>
+<br>
 
 ## Após rodar o script, o terminal retorna:
 ![terminal_script](https://github.com/user-attachments/assets/935ae22b-e751-4f41-934d-f7f6283982c0)
